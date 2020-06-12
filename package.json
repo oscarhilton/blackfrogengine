@@ -1,0 +1,21 @@
+{
+  "name": "blackfrogengine",
+  "version": "1.0.0",
+  "description": "Black Frog Game Engine",
+  "private": true,
+  "scripts": {
+    "build": "webpack --config webpack.config.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "webpack --watch"
+  },
+  "keywords": [
+    "Game",
+    "Engine"
+  ],
+  "author": "Oscar Hilton",
+  "license": "ISC",
+  "devDependencies": {
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.11"
+  }
+}
