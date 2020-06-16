@@ -1,7 +1,7 @@
 export const IMAGE_FILES = {
   FOO: {
     name: 'Foo',
-    src: 'https://i.pinimg.com/originals/a2/2f/e1/a22fe1f8ebc3f136577e3d16c489792d.jpg',
+    src: 'https://www.clipartmax.com/png/middle/85-853849_graphic-the-astro-cat-sprite-single-cat-sprite.png',
   },
   BAR: {
     name: 'Bar',

@@ -33,3 +33,5 @@ export default class Canvas {
     this.ctx.drawImage(this.images[name], x, y, h, w);
   }
 }
+
+export const canvas = new Canvas("gameCanvas");

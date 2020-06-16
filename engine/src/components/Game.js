@@ -1,26 +1,38 @@
+import { canvas } from './Canvas';
+import { KEYS } from '../config/controls';
+
 export default class Game {
-  constructor({ state = {} }) {
+  constructor({ state, constants = {} }) {
     this.frameCount = 0;
     this.state = state;
+    this.constants = constants;
+    this.keyPressed = {};
     
     this.start = this.start.bind(this);
     this.setup = this.setup.bind(this);
     this.update = this.update.bind(this);
     this.draw = this.draw.bind(this);
     this.loop = this.loop.bind(this);
+
+    document.addEventListener('keydown', ({ keyCode }) => this.keyPressed[keyCode] = true, false);
+    document.addEventListener('keyup', ({ keyCode }) => this.keyPressed[keyCode] = false, false);
   }
 
   start() {
-    console.log("STARTING!");
     window.requestAnimationFrame(this.setup);
     window.requestAnimationFrame(this.loop);
   }
 
-  setup() {}
+  setup() {
+    console.log("SETTING UP!");
+  }
 
-  update(progress) {}
+  update(progress) {
+  }
 
-  draw() {}
+  draw() {
+    canvas.clear();
+  }
 
   loop(timestamp) {
     const progress = (timestamp - this.frameCount);
